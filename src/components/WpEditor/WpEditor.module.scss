@@ -1,0 +1,20 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+	.wpEditor {
+		display: block;
+    * + * {
+      margin-top: 20px;
+    }
+	}
+}
+
+@include sp {
+	.wpEditor {
+		display: block;
+    * + * {
+      margin-top: vw(20);
+    }
+	}
+}

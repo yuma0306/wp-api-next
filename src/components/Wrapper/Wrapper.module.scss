@@ -1,0 +1,16 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .wrapper {
+    overflow-x: hidden;
+    padding-top: 50px;
+  }
+}
+
+@include sp {
+  .wrapper {
+    overflow-x: hidden;
+    padding-top: vw(50);
+  }
+}

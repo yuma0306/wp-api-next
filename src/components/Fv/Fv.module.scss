@@ -1,0 +1,17 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .fv {
+    position: relative;
+    max-width: #{$innerWidthPC}px;
+    margin: 0 auto;
+  }
+}
+
+@include sp {
+  .fv {
+    position: relative;
+    width: 100%;
+  }
+}

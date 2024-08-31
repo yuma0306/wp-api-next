@@ -1,0 +1,16 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .wpSection {
+    position: relative;
+    padding-bottom: 80px;
+  }
+}
+
+@include sp {
+  .wpSection {
+    position: relative;
+    padding-bottom: vw(80);
+  }
+}

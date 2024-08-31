@@ -1,0 +1,16 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .faq {
+    $this: &;
+    border-bottom: 1px solid $primary02;
+  }
+}
+
+@include sp {
+  .faq {
+    $this: &;
+    border-bottom: 1px solid $primary02;
+  }
+}
