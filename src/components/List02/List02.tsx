@@ -21,8 +21,8 @@ export default function List02({ list }: { list: PostType[] }) {
       {list.map(item => (
         <li className={styles.list02__item} key={item.id}>
           <span className={styles.list02__text}>{item.title.rendered}：</span>
-          <TextLink href={`/lp${item.link.replace(host, '')}`}>
-            {`/lp${item.link.replace(host, '')}`}
+          <TextLink href={item.link.replace(host, '')}>
+            {item.link.replace(host, '')}
           </TextLink>
         </li>
       ))}
