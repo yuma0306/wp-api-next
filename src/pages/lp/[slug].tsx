@@ -43,7 +43,6 @@ export const getStaticProps = getTemplateProps('page-lp.php');
  * Export default
  */
 export default function Article({ post, slug }: { post: PostType, slug: MetaType['slug'] }) {
-  console.log(post);
   const robotsTag = getRobotsTag({ noindex: post.acf.noindex_field, nofollow: post.acf.nofollow_field });
   const canonicalUrl = post.acf.canonical_field || `${host}/lp/${slug}/`;
   const ogUrl = post.acf.og_url_field || `${host}/lp/${slug}/`;

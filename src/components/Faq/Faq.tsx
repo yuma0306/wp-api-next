@@ -20,6 +20,7 @@ export default function Faq({ faq }: { faq: PostType['acf']['lp_faq'] }) {
             key={index}
             question={item.lp_faq_question}
             answer={item.lp_faq_answer}
+            index={index}
           />
         );
       })}
