@@ -21,19 +21,22 @@ export default function FaqItem({ question, answer, index }: Props) {
   const [isActive, setIsActive] = useState<boolean>(false);
   // useRef
   const refAnswer = useRef<HTMLDListElement>(null);
-  // useEffect
+  /**
+   * useEffectがコンポーネントのマウント時に一度だけ実行される
+   * 第二引数には依存関係の配列が入り、その配列内の値が変化するたびにuseEffectが再実行
+   */
   useEffect(() => {
     index === 0 && setIsActive(true);
   }, []);
-  // handleAcc
-  const handleAcc = () => {
+  // handleClick
+  const handleClick = () => {
     setIsActive(!isActive);
   };
   // return
   return (
     <dl
       className={`${styles.faqItem} ${isActive ? styles['faqItem--isActive'] : ''}`}
-      onClick={handleAcc}
+      onClick={handleClick}
     >
       <dt className={styles.faqItem__question}>
         {question}
